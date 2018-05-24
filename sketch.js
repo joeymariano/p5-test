@@ -1,18 +1,29 @@
-
+var nmlstyl;
 
 function setup() {
   // put setup code here
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
   background(0);
   noStroke();
+  nmlstyl = createDiv('&nbspnmlstyl&nbsp&nbsp');
+  nmlstyl.position(0,0)
+  nmlstyl.style('font-family', 'Arial');
+  nmlstyl.style('font-size', '8em');
+  nmlstyl.style('background-color', 'white');
+  nmlstyl.style('font-weight', 'bolder');
 }
 
 function draw() {
-  let colr = selectColr(int(random(1,6)));
+  background(0);
 
-  fill(colr);
+  for (var i=0; i < 400; i+=1){
+    let colr = selectColr(int(random(1,6)));
+    fill(colr);
+    rect(randoHundoNumbo(0,displayWidth), randoHundoNumbo(0,displayHeight), 20, 20);
+  }
 
-  rect(randoHundoNumbo(0,displayWidth), randoHundoNumbo(0,displayHeight), 20, 20);
+  nmlstyl.show();
+
 }
 
 function randoHundoNumbo(lowerNumb, higherNumb) {
@@ -44,4 +55,9 @@ function selectColr(numb) {
       break;
   }
   return result;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(0);
 }
