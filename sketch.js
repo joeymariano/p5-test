@@ -21,12 +21,6 @@ function draw() {
     touchBool = false;
   }
 
-  fill(255);
-  rect(0,0,windowWidth/3,windowHeight/4.5);
-  fill(0);
-  textStyle(BOLD);
-  textSize(windowWidth/12);
-  text('nmlstyl', windowWidth/44.5, windowHeight/6.5);
 }
 
 function mouseMoved(){

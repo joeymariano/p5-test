@@ -3,6 +3,12 @@ html{
 }
 
 #nmlstyl {
+  z-index: 1;
+  display: inline-block;
+  font-size: 8em;
+  font-family: Arial;
+  color: black;
+  background-color: white;
 
 }
 
@@ -21,4 +27,11 @@ html{
 .container {
   background-color: black;
   width: 700px;
+}
+
+#defaultCanvas0 {
+  z-index: -1;
+  position: absolute;
+  top:0;
+  left:0;
 }
