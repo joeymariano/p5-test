@@ -1,4 +1,5 @@
 var mouseBool = false;
+var touchBool = false;
 
 function setup() {
   // put setup code here
@@ -10,17 +11,22 @@ function setup() {
 function draw() {
   background(0);
 
-  if (mouseBool == true){
+  if (mouseBool == true || touchBool == true){
     for (var i=0; i < 400; i+=1){
       let colr = selectColr(int(random(1,6)));
       fill(colr);
       rect(randoHundoNumbo(0,displayWidth), randoHundoNumbo(0,displayHeight), 20, 20);
     }
     mouseBool = false;
+    touchBool = false;
   }
 
   fill(255);
-  rect(0,0,540,140);
+  rect(0,0,windowWidth/3,windowHeight/4.5);
+  fill(0);
+  textStyle(BOLD);
+  textSize(windowWidth/12);
+  text('nmlstyl', windowWidth/44.5, windowHeight/6.5);
 }
 
 function mouseMoved(){
@@ -29,12 +35,7 @@ function mouseMoved(){
 }
 
 function touchMoved(){
-      background(0);
-  for (var i=0; i < 400; i+=1){
-    let colr = selectColr(int(random(1,6)));
-    fill(colr);
-    rect(randoHundoNumbo(0,displayWidth), randoHundoNumbo(0,displayHeight), 20, 20);
-  }
+  touchBool = true;
   return false;
 }
 
