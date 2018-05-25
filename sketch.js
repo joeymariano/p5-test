@@ -1,35 +1,35 @@
-var nmlstyl;
-var artist_pic;
-
+var mouseBool = false;
 
 function setup() {
   // put setup code here
   createCanvas(windowWidth, windowHeight);
   background(0);
   noStroke();
-  nmlstyl = createDiv(['&nbspnmlstyl&nbsp&nbsp']);
-  nmlstyl.id('nmlstyl');
-  artist_pic = loadImage("assets/nmlstyl.jpg");
 }
 
 function draw() {
-  image(artist_pic, 540,0,160,160);
-  nmlstyl.show();
+  background(0);
 
+  if (mouseBool == true){
+    for (var i=0; i < 400; i+=1){
+      let colr = selectColr(int(random(1,6)));
+      fill(colr);
+      rect(randoHundoNumbo(0,displayWidth), randoHundoNumbo(0,displayHeight), 20, 20);
+    }
+    mouseBool = false;
+  }
+
+  fill(255);
+  rect(0,0,540,140);
 }
 
 function mouseMoved(){
-  background(0);
-  for (var i=0; i < 400; i+=1){
-    let colr = selectColr(int(random(1,6)));
-    fill(colr);
-    rect(randoHundoNumbo(0,displayWidth), randoHundoNumbo(0,displayHeight), 20, 20);
-  }
+  mouseBool = true;
   return false;
 }
 
 function touchMoved(){
-  background(0);
+      background(0);
   for (var i=0; i < 400; i+=1){
     let colr = selectColr(int(random(1,6)));
     fill(colr);

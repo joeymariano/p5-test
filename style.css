@@ -1,15 +1,24 @@
 html{
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #nmlstyl {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: Arial;
-  font-size: 8em;
-  height: 160px;
-  width: 540px;
-  background-color: white;
-  font-weight: bolder;
+
+}
+
+#artist_pic {
+
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.container {
+  background-color: black;
+  width: 700px;
 }
