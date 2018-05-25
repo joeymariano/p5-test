@@ -1,4 +1,6 @@
 var nmlstyl;
+var artist_pic;
+
 
 function setup() {
   // put setup code here
@@ -6,16 +8,14 @@ function setup() {
   background(0);
   noStroke();
   nmlstyl = createDiv(['&nbspnmlstyl&nbsp&nbsp']);
-  nmlstyl.position(0,0)
-  nmlstyl.style('font-family', 'Arial');
-  nmlstyl.style('font-size', '8em');
-  nmlstyl.style('background-color', 'white');
-  nmlstyl.style('font-weight', 'bolder');
   nmlstyl.id('nmlstyl');
+  artist_pic = loadImage("assets/nmlstyl.jpg");
 }
 
 function draw() {
+  image(artist_pic, 540,0,160,160);
   nmlstyl.show();
+
 }
 
 function mouseMoved(){

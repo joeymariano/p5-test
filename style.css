@@ -1,13 +1,15 @@
-html
-{
-overflow: hidden;
+html{
+  overflow: hidden;
 }
+
 #nmlstyl {
   position: absolute;
   top: 0;
   left: 0;
   font-family: Arial;
   font-size: 8em;
+  height: 160px;
+  width: 540px;
   background-color: white;
   font-weight: bolder;
 }
