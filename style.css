@@ -3,13 +3,15 @@ html{
 }
 
 #nmlstyl {
+  float:left;
   z-index: 1;
   display: inline-block;
   font-size: 8em;
   font-family: Arial;
   color: black;
   background-color: white;
-
+  padding: .1em;
+  font-weight: bolder;
 }
 
 #artist_pic {
