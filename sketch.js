@@ -1,9 +1,11 @@
 var mouseBool = false;
 var touchBool = false;
+var myCanvas;
 
 function setup() {
   // put setup code here
-  createCanvas(windowWidth, windowHeight);
+  myCanvas = createCanvas(windowWidth, windowHeight);
+  myCanvas.parent("canvas");
   background(0);
   noStroke();
 }
