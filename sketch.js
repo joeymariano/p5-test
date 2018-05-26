@@ -1,5 +1,6 @@
 var mouseBool = false;
 var touchBool = false;
+var mouseWheelBool = false;
 var myCanvas;
 
 function setup() {
@@ -13,7 +14,7 @@ function setup() {
 function draw() {
   background(0);
 
-  if (mouseBool == true || touchBool == true){
+  if (mouseBool == true || touchBool == true || mouseWheelBool == true ){
     for (var i=0; i < 400; i+=1){
       let colr = selectColr(int(random(1,6)));
       fill(colr);
@@ -21,6 +22,7 @@ function draw() {
     }
     mouseBool = false;
     touchBool = false;
+    mouseWheelBool = false;
   }
 
 }
@@ -30,7 +32,12 @@ function mouseMoved(){
   return false;
 }
 
-function touchMoved(){
+function mouseWheel(event) {
+  mouseWheelBool = true;
+  return false;
+}
+
+function touchMoved() {
   touchBool = true;
   return false;
 }
